@@ -42,7 +42,8 @@ import javax.xml.parsers.DocumentBuilderFactory;
 public class MainActivity extends ActionBarActivity {
 
     // All static variables
-    static final String URL = "https://raw.githubusercontent.com/benchada/Video_MobileApp/master/app/src/main/res/videos_list.xml";
+    static final String URL = "https://raw.githubusercontent.com/benchada/Video_MobileApp/master/videos_list2.xml";
+
     //static final String URL = "http://api.androidhive.info/music/music.xml";
     // XML node keys
     static final String KEY_SONG = "song"; // parent node
@@ -51,6 +52,7 @@ public class MainActivity extends ActionBarActivity {
     static final String KEY_ARTIST = "artist";
     static final String KEY_DURATION = "duration";
     static final String KEY_THUMB_URL = "thumb_url";
+    static final String KEY_VIDEO_URL = "video_url";
 
     ListView list;
     LazyAdapter adapter;
@@ -121,6 +123,7 @@ public class MainActivity extends ActionBarActivity {
                 map.put(KEY_ARTIST, parser.getValue(e, KEY_ARTIST));
                 map.put(KEY_DURATION, parser.getValue(e, KEY_DURATION));
                 map.put(KEY_THUMB_URL, parser.getValue(e, KEY_THUMB_URL));
+                map.put(KEY_VIDEO_URL, parser.getValue(e, KEY_VIDEO_URL));
 
                 // adding HashList to ArrayList
                 songsList.add(map);
